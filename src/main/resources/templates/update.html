@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Spring Boot MVC</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body class="container">
+	<div id="studentForm">
+		<h3 class="header">Student Information Update Form</h3>
+		<form class="form-horizontal" action="/updateStudent" method="post">
+			<div class="form-group">
+				<label for="id">Id </label> <input type="number" name="id"
+					class="form-control" readonly="readonly" th:value="${#numbers.formatInteger(newStudent.id,1)}"/>
+			</div>
+			<div class="form-group">
+				<label for="firstName">First Name </label> <input type="text"
+					name="firstName" class="form-control" th:value="${newStudent.firstName}"/>
+			</div>
+			<div class="form-group">
+				<label for="lastname">Last Name </label> <input type="text"
+					name="lastName" class="form-control" th:value="${newStudent.lastName}"/>
+			</div>
+			<button type="submit" class="btn btn-outline-dark">Submit</button>
+			<button type="reset" class="btn btn-outline-dark">Clear</button>
+			<a type="button" role="button" class="btn btn-outline-dark" href="/getAllStudents">Cancel</a>
+		</form>
+	</div>
+</body>
+</html>

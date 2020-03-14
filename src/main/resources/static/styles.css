@@ -1,0 +1,15 @@
+@charset "ISO-8859-1";
+
+body {
+	margin: 50px;
+	background-color: appworkspace;
+}
+
+.header {
+	text-align: center;
+}
+
+#studentForm {
+	margin: auto;
+	width: 50%;
+}

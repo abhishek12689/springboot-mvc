@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Spring Boot MVC</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body class="container">
+	<h1 class="header">Details added as below</h1>
+	<table class="table">
+		<tr>
+			<th>Id</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+		</tr>
+		<tr>
+			<td th:text="${newStudent.id}"></td>
+			<td th:text="${newStudent.firstName}"></td>
+			<td th:text="${newStudent.lastName}"></td>
+		</tr>
+		<tr><td colspan="3" style="text-align: center;"><a th:href="@{'/updateStudent/' + ${newStudent.id}}">Edit Details</a></td></tr>
+		<tr><td colspan="3" style="text-align: center;"><a href="/home">Add another</a></td></tr>
+		<tr><td colspan="3" style="text-align: center;"><a href="/getAllStudents">List all</a></td></tr>
+	</table>
+</body>
+</html>
