@@ -27,12 +27,13 @@
 			<th>Last Name</th>
 		</tr>
 		<tr>
-			<td th:text="${student.id}"></td>
-			<td th:text="${student.firstName}"></td>
-			<td th:text="${student.lastName}"></td>
+			<td th:text="${person.id}"></td>
+			<td th:text="${person.firstName}"></td>
+			<td th:text="${person.lastName}"></td>
+			<td th:text="${person.salary}"></td>
 		</tr>
 		<tr><td colspan="3" style="text-align: center;"><a href="/home">Add another</a></td></tr>
-		<tr><td colspan="3" style="text-align: center;"><a href="/getAllStudents">List all</a></td></tr>
+		<tr><td colspan="3" style="text-align: center;"><a href="/getAllPersons">List all</a></td></tr>
 	</table>
 </body>
 </html>

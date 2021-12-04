@@ -25,15 +25,17 @@
 			<th>Id</th>
 			<th>First Name</th>
 			<th>Last Name</th>
+			<th>Salary</th>
 		</tr>
 		<tr>
-			<td th:text="${newStudent.id}"></td>
-			<td th:text="${newStudent.firstName}"></td>
-			<td th:text="${newStudent.lastName}"></td>
+			<td th:text="${newPerson.id}"></td>
+			<td th:text="${newPerson.firstName}"></td>
+			<td th:text="${newPerson.lastName}"></td>
+			<td th:text="${newPerson.salary}"></td>
 		</tr>
-		<tr><td colspan="3" style="text-align: center;"><a th:href="@{'/updateStudent/' + ${newStudent.id}}">Edit Details</a></td></tr>
+		<tr><td colspan="3" style="text-align: center;"><a th:href="@{'/updatePerson/' + ${newPerson.id}}">Edit Details</a></td></tr>
 		<tr><td colspan="3" style="text-align: center;"><a href="/home">Add another</a></td></tr>
-		<tr><td colspan="3" style="text-align: center;"><a href="/getAllStudents">List all</a></td></tr>
+		<tr><td colspan="3" style="text-align: center;"><a href="/getAllPersons">List all</a></td></tr>
 	</table>
 </body>
 </html>

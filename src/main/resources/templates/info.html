@@ -19,27 +19,29 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body class="container">
-	<h1 class="header">Information of all students</h1>
+	<h1 class="header">Information of all people</h1>
 	<table class="table" >
 	<thead>
 		<tr>
 			<th>Id</th>
 			<th>First Name</th>
 			<th>Last Name</th>
+			<th>Salary</th>
 			<th>Actions</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr th:if="${students.empty}">
+		<tr th:if="${people.empty}">
 			<td colspan="4" style="text-align: center;">No records available. <a href="/home">Try adding one.</a></td>
 		</tr>
-		<tr th:each="student : ${students}">
-			<td th:text="${student.id}"></td>
-			<td th:text="${student.firstName}"></td>
-			<td th:text="${student.lastName}"></td>
-			<td><a href="/home" title="Add another student"><i class="material-icons">library_add</i></a>
-				<a th:href="@{'/removeStudent/' + ${student.id}}" title="Remove this student"><i class="material-icons">delete</i></a>
-				<a th:href="@{'/updateStudent/' + ${student.id}}" title="Update this student's details"><i class="material-icons updBtn">update</i></a></td>
+		<tr th:each="person : ${people}">
+			<td th:text="${person.id}"></td>
+			<td th:text="${person.firstName}"></td>
+			<td th:text="${person.lastName}"></td>
+			<td th:text="${person.salary}"></td>
+			<td><a href="/home" title="Add another person"><i class="material-icons">library_add</i></a>
+				<a th:href="@{'/removePerson/' + ${person.id}}" title="Remove this person"><i class="material-icons">delete</i></a>
+				<a th:href="@{'/updatePerson/' + ${person.id}}" title="Update this person's details"><i class="material-icons updBtn">update</i></a></td>
 		</tr>
 	</tbody>
 	</table>
